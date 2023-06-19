@@ -12,7 +12,7 @@
     font-size: large;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     align-items: center;
     width: 50%;
 }
@@ -29,7 +29,10 @@
     border: none;
 }
 
-
+.text{
+    margin: auto;
+    font-size: large;
+}
 
 input{
     background: transparent;
@@ -68,7 +71,7 @@ p{
 
 .child {
     width: 800px;
-    height: 500px;
+    height: 600px;
     position: absolute;
     top: 0;
     right: 0;
