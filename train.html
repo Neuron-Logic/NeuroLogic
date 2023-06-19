@@ -16,7 +16,7 @@
                 демонстрацией обучения нейроной сети алгоритмом Backpropogation. <br>
             </p>
         </div>
-        
+        <p class="text">Введите данные для обучения</p>
         <table class="table1">
             <tr>
                 <td class="H1">X1</td>
@@ -51,22 +51,22 @@
             
         </table>
         <p></p>
-
+        
         <table class="table2">
             <tr>
-                <td class="data1">Количество нейронов в скрытом слое:</td>
+                <td class="data1">Количество нейронов в скрытом слое (1-10):</td>
                 <td class="data2"><input class="" id="H" type="text"></td>          
             </tr>
             <tr>
-                <td class="data1">Скорость обучения:</td>
+                <td class="data1">Скорость обучения (0-1):</td>
                 <td class="data2"><input id="n" type="text"></td>
             </tr>
             <tr>
-                <td class="data1">Количество итераций (эпох)</td>
+                <td class="data1">Количество итераций (1-10000):</td>
                 <td class="data2"><input id="era" type="text"></td>          
             </tr>
             <tr>
-                <td class="data1">Минимальная ошибка обучения:</td>
+                <td class="data1">Минимальная ошибка обучения (0.001 - 0.1):</td>
                 <td class="data2"><input id="perfect_error" type="text"></td>          
             </tr>
         </table>
@@ -74,7 +74,8 @@
         <p><button id="butt_input" onclick="input()">Ввести параметры</button></p>
         <button id="butt_result" onclick="training()">Обучить</button>
         <button id="butt_clear" onclick="location.reload()">Очистить</button>
-
+ 
+        <p class="solve">Введите пример для решения</p>
         <table class="table3">
             <tr>
                 <td class="H1">X1</td>
