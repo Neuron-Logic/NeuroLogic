@@ -1,6 +1,8 @@
 'use strict';
 
 var TrueM = [],
+    Solve = [],
+    Solve_Y,
     W = [], //веса на входе
     W_out = [], //веса на выходе
     X_in = 2,  //входные
@@ -53,10 +55,12 @@ function training(){
 }
 
 function solve(){
+
+    Solve = [document.getElementById('input1').value, document.getElementById('input2').value]
+
     //Решение
-    for (var str = 0; str < TrueM.length; str++) {
         for (var i = 0; i < H; i++) {
-            H1 = (TrueM[str][0] * W[i * 2]) + (TrueM[str][1] * W[i * 2 + 1]);
+            H1 = (Solve[0] * W[i * 2]) + (Solve[1] * W[i * 2 + 1]);
             Y_H1[i] = 1 / (1 + Math.exp(-1 * H1));
         }
 
@@ -64,13 +68,10 @@ function solve(){
             H_out[j] = (W_out[j] * Y_H1[j])
         }
 
-       Yi_out[str] = 1 / (1 + Math.exp(-1 * H_out.map(i => x += i, x = 0).reverse()[0]));
-    }
+        Solve_Y = 1 / (1 + Math.exp(-1 * H_out.map(i => x += i, x = 0).reverse()[0]));
 
-    document.getElementById('Yi_1').innerHTML = Yi_out[0].toFixed(4);
-    document.getElementById('Yi_2').innerHTML = Yi_out[1].toFixed(4);
-    document.getElementById('Yi_3').innerHTML = Yi_out[2].toFixed(4);
-    document.getElementById('Yi_4').innerHTML = Yi_out[3].toFixed(4);
+    document.getElementById('output').innerHTML = Solve_Y.toFixed(4);
+  
 }
 
     //обучение
